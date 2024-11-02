@@ -14,12 +14,13 @@
       <ul class="dropdown-menu">
         <li><a class="dropdown-item" href={% url 'plastico' %}>plastico</a></li>
         <li><a class="dropdown-item" href="#">Latas</a></li>
-        <li><a class="dropdown-item" href="#">carton</a></li>
+        <li><a class="dropdown-item" href={% url 'carton' %}>carton</a></li>
       </ul>
     </div>
     <br>
     <br>
     <br>
+    <h1>Material seleccionado: Plástico</h1>
     {{mapas|safe}}
     <br>
 </div> 
@@ -46,6 +47,8 @@
     Por esto es muy importante reciclar, ya que a pesar de una acción tan sencilla como lo puede ser desechar una botella de plástico, podemos generar muchos beneficios para nuestro planeta. 
   </h1>
 </div>
+
+
   
 
 {% endblock %}
