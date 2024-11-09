@@ -12,9 +12,14 @@
         Selecciona el material
       </button>
       <ul class="dropdown-menu">
-        <li><a class="dropdown-item" href={% url 'plastico' %}><b>Plastico</b></a></li>
-        <li><a class="dropdown-item" href="#">Latas</a></li>
-        <li><a class="dropdown-item" href={% url 'carton' %}>carton</a></li>
+        <li><a class="dropdown-item" href={% url 'plastico' %}>Plástico</a></li>
+        <li><a class="dropdown-item" href={% url "latas" %}>Latas</a></li>
+        <li><a class="dropdown-item" href={% url 'carton' %}>Cartón</a></li>
+        <li><a class="dropdown-item" href={% url 'vidrio' %}>Vidrio</a></li>
+        <li><a class="dropdown-item" href={% url 'papel' %}>Papel</a></li>
+        <li><a class="dropdown-item" href={% url 'latasal' %}>Latas de aluminio</a></li>
+        <li><a class="dropdown-item" href={% url 'tapas' %}>Tapas de plástico</a></li>
+        <li><a class="dropdown-item" href={% url 'electro' %}>Residuos electrónicos y eléctricos</a></li>
       </ul>
     </div>
 </div> 
