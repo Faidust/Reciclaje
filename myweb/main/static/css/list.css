@@ -1,0 +1,39 @@
+/* Estilo para la lista ordenada */
+ol {
+    padding-left: 20px; /* Ajusta el espaciado para la lista */
+    margin: 0;
+    font-family: 'Arial', sans-serif; /* Tipografía legible */
+    counter-reset: list-counter; /* Resetea el contador al inicio de la lista */
+}
+
+  /* Estilo para cada ítem de la lista */
+ol li {
+    font-size: 25px; /* Tamaño de fuente mayor */
+    font-weight: bold; /* Texto en negrita */
+    background-image: linear-gradient(45deg, #ff9a00, #ffcc00, #ffb200); /* Degradado en tonos naranjas y dorados */
+    -webkit-background-clip: text; /* Aplica el degradado solo al texto */
+    color: transparent; /* Hace que el texto sea transparente para mostrar el degradado */
+    padding: 8px 0; /* Espaciado vertical */
+    margin: 10px 0; /* Espaciado entre elementos */
+    position: relative; /* Para posicionar el número con ::before */
+    transition: transform 0.3s ease, text-shadow 0.3s ease; /* Transición suave para efectos */
+}
+
+  /* Estilo para los números de la lista */
+ol li::before {
+    content: counter(list-counter) ". "; /* Genera los números de la lista */
+    counter-increment: list-counter; /* Incrementa el contador de la lista */
+    font-size: 25px; /* Tamaño de los números */
+    font-weight: bold; /* Números en negrita */
+    background-image: linear-gradient(45deg, #ff9a00, #ffcc00, #ffb200); /* Degradado para los números */
+    -webkit-background-clip: text; /* Aplica el degradado solo a los números */
+    color: transparent; /* Hace que los números sean transparentes para mostrar el degradado */
+    position: absolute; /* Posiciona el número antes del texto */
+    left: -30px; /* Ajusta la posición de los números a la izquierda */
+}
+
+  /* Efecto al pasar el mouse sobre los ítems de la lista */
+ol li:hover {
+    transform: scale(1.1); /* Aumenta el tamaño al pasar el mouse */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7); /* Resalta el texto con sombra */
+}

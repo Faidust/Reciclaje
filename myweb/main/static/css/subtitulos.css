@@ -1,0 +1,17 @@
+h2 {
+    font-family: 'Impact', Charcoal, sans-serif; /* Fuente audaz y llamativa */
+    font-size: 2.5em; /* Tamaño destacado */
+    color: #ffffff;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    /* Fondo con degradado */
+    background: linear-gradient(90deg, #6a5acd, #7b68ee, #4169e1);
+    -webkit-background-clip: text;
+    color: transparent;
+
+    /* Sombra para realce */
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5),
+                0px 0px 10px rgba(123, 104, 238, 0.8),
+                0px 0px 15px rgba(65, 105, 225, 0.6);
+}
