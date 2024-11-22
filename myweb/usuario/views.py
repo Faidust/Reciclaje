@@ -6,7 +6,7 @@ from django.contrib.auth import authenticate, login
 
 @login_required
 def usuario(request):
-    return render(request, "usuario.html")
+    return render(request, "nivel.html")
 
 def exit(request):
     logout(request)
