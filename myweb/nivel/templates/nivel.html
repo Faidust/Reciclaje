@@ -1,0 +1,53 @@
+{% extends "index.html" %}
+{% load static %}
+{% block content %}
+
+<h2><b>Estás en el nivel:</b></h2>
+<br>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logo with Number</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="logo-container">
+        <img src="{% static 'images/estrella.jpg' %}" alt="Logo" class="logo">
+        <div class="number">5</div>
+    </div>
+</body>
+</html>
+
+<form action="{% url 'reciclar' %}" method="post">
+    {% csrf_token %}
+    <div class="form-group">
+        <label for="material">Ingrese el material:</label>
+        <input type="text" id="material" name="material" class="form-control" required>
+    </div>
+    <button type="submit" class="btn btn-primary mt-2">Reciclar</button>
+</form>
+
+<form action="{% url 'guardar_palabra' %}" method="post">
+    {% csrf_token %}
+    <div class="form-group">
+        <label for="palabra">Ingrese el material a reciclar:</label>
+        <input type="text" id="palabra" name="palabra" class="form-control" required>
+    </div>
+    <button type="submit" class="btn btn-primary mt-2">Guardar</button>
+</form>
+
+<h3>Palabras ingresadas:</h3>
+<ul>
+    {% for palabra in palabras %}
+        <li>{{ palabra.palabra }}: {{ palabra.cantidad }} veces</li>
+    {% endfor %}
+</ul>
+<h3>Total de palabras ingresadas: {{ total_palabras }}</h3>
+
+
+
+{% endblock %}

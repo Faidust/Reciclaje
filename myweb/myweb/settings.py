@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     "main",
     "usuario",
     "mapas",
+    "nivel",
 ]
 
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
