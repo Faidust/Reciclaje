@@ -22,14 +22,6 @@
 </body>
 </html>
 
-<form action="{% url 'reciclar' %}" method="post">
-    {% csrf_token %}
-    <div class="form-group">
-        <label for="material">Ingrese el material:</label>
-        <input type="text" id="material" name="material" class="form-control" required>
-    </div>
-    <button type="submit" class="btn btn-primary mt-2">Reciclar</button>
-</form>
 
 <form action="{% url 'guardar_palabra' %}" method="post">
     {% csrf_token %}
@@ -46,7 +38,7 @@
         <li>{{ palabra.palabra }}: {{ palabra.cantidad }} veces</li>
     {% endfor %}
 </ul>
-<h3>Total de palabras ingresadas: {{ total_palabras }}</h3>
+<h3>Total de palabras ingresadas: {{ total_palabras.total_palabras }}</h3>
 
 
 
