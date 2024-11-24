@@ -41,10 +41,6 @@ def plastico(request):
     folium.Marker(location=[-33.490950682046076, -70.61869795849537],popup=fablab).add_to(initialmap)
     folium.Marker(location=[-33.49055196016342, -70.61957121942228],popup=piso4).add_to(initialmap)
     folium.Marker(location=[-33.49049296544408, -70.61872235125712],popup=piso4).add_to(initialmap)
-    folium.CircleMarker([max_lat, min_lon], tooltip="Upper Left Corner").add_to(initialmap)
-    folium.CircleMarker([min_lat, min_lon], tooltip="Lower Left Corner").add_to(initialmap)
-    folium.CircleMarker([min_lat, max_lon], tooltip="Lower Right Corner").add_to(initialmap)
-    folium.CircleMarker([max_lat, max_lon], tooltip="Upper Right Corner").add_to(initialmap)
     context={"mapas":initialmap._repr_html_()}
     return render(request,'plastico.html',context)
 
@@ -83,10 +79,6 @@ def carton(request):
     folium.Marker(location=[-33.490950682046076, -70.61869795849537],popup=fablab).add_to(initialmap)
     folium.Marker(location=[-33.49055196016342, -70.61957121942228],popup=piso4).add_to(initialmap)
     folium.Marker(location=[-33.49049296544408, -70.61872235125712],popup=piso4).add_to(initialmap)
-    folium.CircleMarker([max_lat, min_lon], tooltip="Upper Left Corner").add_to(initialmap)
-    folium.CircleMarker([min_lat, min_lon], tooltip="Lower Left Corner").add_to(initialmap)
-    folium.CircleMarker([min_lat, max_lon], tooltip="Lower Right Corner").add_to(initialmap)
-    folium.CircleMarker([max_lat, max_lon], tooltip="Upper Right Corner").add_to(initialmap)
     context={"mapas":initialmap._repr_html_()}
     return render(request,'carton.html',context)
 
@@ -121,10 +113,6 @@ def latas(request):
     folium.Marker(location=[-33.490950682046076, -70.61869795849537],popup=fablab).add_to(initialmap)
     folium.Marker(location=[-33.49055196016342, -70.61957121942228],popup=piso4).add_to(initialmap)
     folium.Marker(location=[-33.49049296544408, -70.61872235125712],popup=piso4).add_to(initialmap)
-    folium.CircleMarker([max_lat, min_lon], tooltip="Upper Left Corner").add_to(initialmap)
-    folium.CircleMarker([min_lat, min_lon], tooltip="Lower Left Corner").add_to(initialmap)
-    folium.CircleMarker([min_lat, max_lon], tooltip="Lower Right Corner").add_to(initialmap)
-    folium.CircleMarker([max_lat, max_lon], tooltip="Upper Right Corner").add_to(initialmap)
     context={"mapas":initialmap._repr_html_()}
     return render(request,'latas.html',context)
 
@@ -164,10 +152,6 @@ def vidrio(request):
     folium.Marker(location=[-33.490950682046076, -70.61869795849537],popup=fablab).add_to(initialmap)
     folium.Marker(location=[-33.49055196016342, -70.61957121942228],popup=piso4).add_to(initialmap)
     folium.Marker(location=[-33.49049296544408, -70.61872235125712],popup=piso4).add_to(initialmap)
-    folium.CircleMarker([max_lat, min_lon], tooltip="Upper Left Corner").add_to(initialmap)
-    folium.CircleMarker([min_lat, min_lon], tooltip="Lower Left Corner").add_to(initialmap)
-    folium.CircleMarker([min_lat, max_lon], tooltip="Lower Right Corner").add_to(initialmap)
-    folium.CircleMarker([max_lat, max_lon], tooltip="Upper Right Corner").add_to(initialmap)
     context={"mapas":initialmap._repr_html_()}
     return render(request,'vidrio.html',context)
 
@@ -206,10 +190,6 @@ def papel(request):
     folium.Marker(location=[-33.490950682046076, -70.61869795849537],popup=fablab).add_to(initialmap)
     folium.Marker(location=[-33.49055196016342, -70.61957121942228],popup=piso4).add_to(initialmap)
     folium.Marker(location=[-33.49049296544408, -70.61872235125712],popup=piso4).add_to(initialmap)
-    folium.CircleMarker([max_lat, min_lon], tooltip="Upper Left Corner").add_to(initialmap)
-    folium.CircleMarker([min_lat, min_lon], tooltip="Lower Left Corner").add_to(initialmap)
-    folium.CircleMarker([min_lat, max_lon], tooltip="Lower Right Corner").add_to(initialmap)
-    folium.CircleMarker([max_lat, max_lon], tooltip="Upper Right Corner").add_to(initialmap)
     context={"mapas":initialmap._repr_html_()}
     return render(request,'papel.html',context)
 
@@ -223,10 +203,6 @@ def tapas(request):
     folium.Marker(location=[-33.48967631544855, -70.61887387051037],popup=noac).add_to(initialmap)
     folium.Marker(location=[-33.48981692868987, -70.61947739663124],popup=pasillob).add_to(initialmap)
     folium.Marker(location=[-33.490950682046076, -70.61869795849537],popup=fablab).add_to(initialmap)
-    folium.CircleMarker([max_lat, min_lon], tooltip="Upper Left Corner").add_to(initialmap)
-    folium.CircleMarker([min_lat, min_lon], tooltip="Lower Left Corner").add_to(initialmap)
-    folium.CircleMarker([min_lat, max_lon], tooltip="Lower Right Corner").add_to(initialmap)
-    folium.CircleMarker([max_lat, max_lon], tooltip="Upper Right Corner").add_to(initialmap)
     context={"mapas":initialmap._repr_html_()}
     return render(request,'tapas.html',context)
 
@@ -238,9 +214,5 @@ def electro(request):
     initialmap= folium.Map(max_bounds=True, location=[-33.49061291008033, -70.61921242455158], zoom_start=18,min_lat=min_lat, max_lat=max_lat, min_lon=min_lon, max_lon=max_lon)
     folium.Marker(location=[-33.48981692868987, -70.61947739663124],popup=pasillob).add_to(initialmap)
     folium.Marker(location=[-33.490950682046076, -70.61869795849537],popup=fablab).add_to(initialmap)
-    folium.CircleMarker([max_lat, min_lon], tooltip="Upper Left Corner").add_to(initialmap)
-    folium.CircleMarker([min_lat, min_lon], tooltip="Lower Left Corner").add_to(initialmap)
-    folium.CircleMarker([min_lat, max_lon], tooltip="Lower Right Corner").add_to(initialmap)
-    folium.CircleMarker([max_lat, max_lon], tooltip="Upper Right Corner").add_to(initialmap)
     context={"mapas":initialmap._repr_html_()}
     return render(request,'electro.html',context)

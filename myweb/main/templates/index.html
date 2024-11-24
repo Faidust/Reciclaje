@@ -1,93 +1,32 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/titulos.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/subtitulos.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/parrafos.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/list.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/fondo.css' %}">
+{% extends "inicio.html" %}
 
-    <title>Recicla sansanamente</title>
-    
-    <style>
-        .boton{
-            display: block;
-            width: 50px;
-            border-radius: 10px;
-            padding: 15px 60px;
-            background-color: gold;
-            margin: 200px 450px;
-            text-decoration: none;
-        }
+{% block content %}
 
-    </style>
-</head>
-<body>
-    <div class="container">
+<br>
+<br>
+<br>
+<div class="container mt-5">
+    <div class="card bg-warning text-white">
+      <div class="card-body">
+        <h5 class="card-title text-center" style="color: red;">¿Qué es Recicla Sansanamente?</h5>
+        <p class="card-text" style="color: black;">
+            Esta aplicación fue creada para todos los y las sansanas que quieran ayudar a ralentizar la crisis climática que estamos viviendo como
+            sociedad a dia de hoy. En esta app podrás encontrar mediante un mapa todos los puntos de reciclaje de la Universidad Técnica Federico Santa 
+            María (Campus San Joaquín) según el material que desees reciclar.
 
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-              <a class="navbar-brand" href={% url "home" %}>Indices</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href={% url "home" %}>Inicio</a>
-                  </li>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#">Action</a></li>
-                      <li><a class="dropdown-item" href="#">Another action</a></li>
-                      <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
-                  </li>
-                  {% if request.user.is_authenticated %}
-                    <li class="nav-item">
-                        <a class="nav-link" href="/logout">Salir</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href={% url "reciclaje" %}>¿Dónde reciclo?</a>
-                    </li>
-
-                    <li class="nav-item">
-                      <a class="nav-link" href={% url "nivel" %}>¡Empieza a reciclar!</a>
-                  </li>
-                    
-                  {% else %}
-                    <li class="nav-item">
-                        <a class="nav-link" href={% url "nivel" %}>Iniciar sesión</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href={% url "register" %}>Registrarse</a>
-                    </li>
-
-                  {% endif %}
-                </ul>
-              </div>
-            </div>
-          </nav>
-          <div class="text-center">
-            <br>
-            <br>
-            <H1>RECICLA SANSANAMENTE</H1>
-          </div>
-
-          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    {% block content %}{% endblock %}
-                      
+            <h5 class="card-title text-center" style="color: red;">¿Cómo funciona Recicla Sansanamente?</h5>
+            <p class="card-text" style="color: black;">
+              1° Paso: Registrate o inicia sesión con tu cuenta de Recicla Sansanamente en la barra de navegación en la parte superior de la aplicación.
+              <br>
+              2° Paso: Ve hacia la pestaña de ¿Dónde reciclo?, selecciona el material que quieras reciclar para luego dirigirte a este y al llegar a la ubicación,
+              sigue los pasos que te indica la aplicación para reciclar el residuo de manera correcta.
+              <br>
+              3° Paso: Ve hacia el apartado de ¡Empieza a reciclar! y selecciona el material que reciclaste para subir de nivel de tu usuario.
+              <br>
+              ¡Y listo ya estas aportando para retrasar los cambios climáticos y recuerda que mientras más recicles, más rapido llegaras al nivel máximo asi que éxito!
+            </p>
+        </p>
+      </div>
     </div>
-    
-    
-    
 
-    
-</body>
-</html>
+{% endblock %}
