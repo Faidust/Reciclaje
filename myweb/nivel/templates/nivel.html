@@ -16,9 +16,14 @@
 </head>
 <body>
     <div class="logo-container">
-        <img src="{% static 'images/estrella.jpg' %}" alt="Logo" class="logo">
-        <div class="number">5</div>
+        <img src="{% static 'images/trofeo.jpg' %}" alt="Logo" class="logo">
     </div>
+    <style>
+        .logo {
+            width: 150px; /* Ajusta el tamaño según sea necesario */
+            height: auto;
+        }
+    </style>
 </body>
 </html>
 
@@ -32,14 +37,22 @@
     <button type="submit" class="btn btn-primary mt-2">Guardar</button>
 </form>
 
-<h3>Palabras ingresadas:</h3>
-<ul>
     {% for palabra in palabras %}
         <li>{{ palabra.palabra }}: {{ palabra.cantidad }} veces</li>
     {% endfor %}
+<h3>Total de palabras ingresadas: {{ total_palabras }}</h3>
+
+<h3>Últimas 3 palabras ingresadas:</h3>
+<ul>
+    {% for palabra in ultimas_palabras %}
+        <li>{{ palabra.palabra }}: {{ palabra.cantidad }} veces</li>
+    {% endfor %}
 </ul>
-<h3>Total de palabras ingresadas: {{ total_palabras.total_palabras }}</h3>
-
-
-
-{% endblock %}
+<h3>Nombre usuario: {{ nombrenivel }}</h3>
+<ul>
+    {% for palabra in ultimas_palabras %}
+        <li>{{ palabra.palabra }}: {{ palabra.ultimas_palabras }} veces</li>
+    {% endfor %}
+</ul>
+    
+{% endblock %}    
