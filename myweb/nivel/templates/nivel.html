@@ -1,4 +1,4 @@
-{% extends "index.html" %}
+{% extends "inicio.html" %}
 {% load static %}
 {% block content %}
 
@@ -28,31 +28,32 @@
 </html>
 
 
-<form action="{% url 'guardar_palabra' %}" method="post">
-    {% csrf_token %}
-    <div class="form-group">
+<div class="container" style="background-color: lightblue; padding: 20px; border-radius: 5px;">
+    <form action="{% url 'guardar_palabra' %}" method="post">
+      {% csrf_token %}
+      <div class="form-group">
         <label for="palabra">Ingrese el material a reciclar:</label>
         <input type="text" id="palabra" name="palabra" class="form-control" required>
-    </div>
-    <button type="submit" class="btn btn-primary mt-2">Guardar</button>
-</form>
-
-    {% for palabra in palabras %}
+      </div>
+      <button type="submit" class="btn btn-primary mt-2">Guardar</button>
+    </form>
+  
+    <h3>Total de palabras ingresadas: {{ total_palabras }}</h3>
+  
+    <h3>Últimas 3 palabras ingresadas:</h3>
+    <ul>
+      {% for palabra in ultimas_palabras %}
         <li>{{ palabra.palabra }}: {{ palabra.cantidad }} veces</li>
-    {% endfor %}
-<h3>Total de palabras ingresadas: {{ total_palabras }}</h3>
-
-<h3>Últimas 3 palabras ingresadas:</h3>
-<ul>
-    {% for palabra in ultimas_palabras %}
-        <li>{{ palabra.palabra }}: {{ palabra.cantidad }} veces</li>
-    {% endfor %}
-</ul>
-<h3>Nombre usuario: {{ nombrenivel }}</h3>
-<ul>
-    {% for palabra in ultimas_palabras %}
+      {% endfor %}
+    </ul>
+  
+    <h3>Nombre usuario: {{ nombrenivel }}</h3>
+    <ul>
+      {% for palabra in ultimas_palabras %}
         <li>{{ palabra.palabra }}: {{ palabra.ultimas_palabras }} veces</li>
-    {% endfor %}
-</ul>
+      {% endfor %}
+    </ul>
+  </div>
+  
     
 {% endblock %}    

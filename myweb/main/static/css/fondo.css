@@ -1,5 +1,5 @@
 body {
-    background-image: url('/static/images/Fondopagina6.jpg');
+    background-image: url('/static/images/fondo1.jpg') !important;
     
     background-size: cover; 
     margin: 0;

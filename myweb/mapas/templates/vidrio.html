@@ -1,4 +1,4 @@
-{% extends "index.html" %}
+{% extends "inicio.html" %}
 
 {% block content %}
 <br>
@@ -24,30 +24,51 @@
     <br>
     <br>
     <br>
-    <h1>Material seleccionado: Vidrio</h1>
+    <h1 style="color: red;">Material seleccionado: Vidrio</h1>
     {{mapas|safe}}
     <br>
 </div> 
 
 <div>
-  <h2>Como reciclar de manera correcta el vidrio:</h2>
+  <h2 style="color: red;">Como reciclar de manera correcta el vidrio:</h2>
     <ol>
-    <h2 style="color: yellow">Para reciclar este material de manera correcta, debes seguir los siguientes pasos :</h2>
+    <h2 style="color: yellow">para Reciclar este material de manera correcta, debes seguir los siguientes pasos :</h2>
 
-    <li>Primero que todo corroborar que el vidrio que se quiera desechar sea reciclable como por ejemplo botellas, frasco de alimentos
-    o envases de bebida.</li>
-    <li>Limpiar y enjuagar bien el envase de vidrio para que no queden residuos en el u otro tipo de material como etiquetas.</li> 
-    <li>De estos pasos puedes insertar la tapa en el contenedor correspondiente (contenedor verde)</li>
-    </ol>
+    <div class="container mt-5">
+      <div class="card bg-warning">
+        <div class="card-body">
+          <p class="card-text" style="color: black">
+            <li style="color: black;">
+              Primero que todo corroborar que el vidrio que se quiera desechar sea reciclable como por ejemplo botellas, frasco de alimentos
+              o envases de bebida.
+            </li>
+            <li style="color: black;">
+              Limpiar y enjuagar bien el envase de vidrio para que no queden residuos en el u otro tipo de material como etiquetas.
+            </li>
+            <li style="color: black;">
+              Intenta que el papel no este cortado en trozos pequeños ya que al estar la hoja completa, facilita el procesamiento del residuo en la planta de reciclaje.
+            </li>
+            <li style="color: black;">
+              Luego de estos pasos puedes insertar el cartón en el contenedor correspondiente (color verde).
+            </li>
+            
+          </p>
+        </div>
+      </div>
+    </div>
     <br>
-    <br>
-    <b><h2>¿Sabias que?</h2></b>
-    <br>
-    <p>Una botella de vidrio reciclada puede volver a utilizarse para la venta en tiendas en 30 dias o menos. El vidrio se puede reciclar infitamente, esto quiere decir que gracias a sus propiedades, este material, permite ahorrar recursos naturales,
-    energía y costes.</p> 
-    <br>
-    <p>Al reciclar vidrio, se evitan emisiones de C02 (dióxido de carbono), lo cual ayuda a combatir el cambio climático. Por esto es muy importante reciclar, ya que, con una acción tan sencilla como desechar en el lugar adecuado, ayudamos a reducir la contaminación.</p>
-
+    <b><h2 style="color: red;">¿Sabias que?</h2></b>
+    <div class="container mt-5">
+      <div class="card bg-warning">
+        <div class="card-body">
+          <p class="card-text" style="color: black">
+            Una botella de vidrio reciclada puede volver a utilizarse para la venta en tiendas en 30 dias o menos. El vidrio se puede reciclar infitamente, esto quiere decir que gracias a sus propiedades, este material, permite ahorrar recursos naturales,
+            energía y costes.
+            <br>
+            Al reciclar vidrio, se evitan emisiones de C02 (dióxido de carbono), lo cual ayuda a combatir el cambio climático. Por esto es muy importante reciclar, ya que, con una acción tan sencilla como desechar en el lugar adecuado, ayudamos a reducir la contaminación.
+          </p>
+        </div>
+      </div>
 </div>
 
 
