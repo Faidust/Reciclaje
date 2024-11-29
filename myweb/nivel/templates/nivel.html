@@ -2,7 +2,9 @@
 {% load static %}
 {% block content %}
 
-<h2><b>Estás en el nivel:</b></h2>
+<h3>Hola, {{ usuario.username }}</h3>
+<h2><b>Estás en el nivel: {{ numnivel }}</b></h2>
+<h1>{{ nombrenivel }}</h1>
 <br>
 
 
@@ -38,21 +40,16 @@
       <button type="submit" class="btn btn-primary mt-2">Guardar</button>
     </form>
   
-    <h3>Total de palabras ingresadas: {{ total_palabras }}</h3>
+    <h3>Total de materiales reciclados: {{ total_palabras }}</h3>
   
-    <h3>Últimas 3 palabras ingresadas:</h3>
+    <h3>Últimos materiales reciclados:</h3>
     <ul>
       {% for palabra in ultimas_palabras %}
-        <li>{{ palabra.palabra }}: {{ palabra.cantidad }} veces</li>
+        <li>{{ palabra.palabra }}: {{ palabra.Palabra }} </li>
       {% endfor %}
     </ul>
   
-    <h3>Nombre usuario: {{ nombrenivel }}</h3>
-    <ul>
-      {% for palabra in ultimas_palabras %}
-        <li>{{ palabra.palabra }}: {{ palabra.ultimas_palabras }} veces</li>
-      {% endfor %}
-    </ul>
+    
   </div>
   
     
